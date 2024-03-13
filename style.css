@@ -63,7 +63,7 @@ nav {
     justify-content: center;
 }
 #about-greeting {
-    padding: 50px;
+    margin-left: 5vw;
     display: flex;
     padding-bottom: 0;
     padding-top: 0;
@@ -76,6 +76,9 @@ nav {
     margin-left: 5vw;
 }
 #about-me {
-    margin: auto;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    flex-basis: 40vw;
+    flex-grow: 1;
     font-size: 1.5em;
 }
