@@ -1,5 +1,6 @@
 /*generic*/
 body {
+    color: white;
     background: black fixed;
     font-size: calc(1vw + 0.5vh);
     font-family: "Lucida Console", "Courier New", monospace;
@@ -9,10 +10,17 @@ ul {
 }
 
 /*navigation*/
+nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
 #nav-list {
-    color: white;
     display: flex;
     gap: 5em;
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 #nav-list li {
     min-width: 0;
@@ -38,6 +46,9 @@ ul {
 #nav-list a:hover{
     color: white;
 }
+#logo {
+    margin-left: 1em;
+}
 
 /*about*/
 #selfie {
@@ -46,19 +57,25 @@ ul {
 }
 #about {
     background-image: linear-gradient(black, rgb(25, 0, 0));
+    margin-top: calc(2.5vw + 2.5vh);
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 #about-greeting {
     padding: 50px;
-    color: white;
     display: flex;
     padding-bottom: 0;
+    padding-top: 0;
 }
 #about-hi {
-    font-size: calc(5vw + 2.5vh);;
+    font-size: 5em;
     margin-bottom: 1vh;
 }
 #about-name {
     margin-left: 5vw;
+}
+#about-me {
+    margin: auto;
+    font-size: 1.5em;
 }
