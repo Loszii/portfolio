@@ -1,12 +1,26 @@
 /*generic*/
 body {
     color: white;
-    background: black fixed;
+    background: linear-gradient(black, rgb(100, 0, 0)) fixed;
     font-size: calc(1vw + 0.5vh);
     font-family: "Lucida Console", "Courier New", monospace;
 }
 ul {
     list-style: none;
+}
+.title {
+    margin: 0;
+    padding: 0;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-color: black;
+}
+.title h1 {
+    margin: 0;
+    padding-top: calc(1vw + 1vh);
+    padding-bottom: calc(1vw + 1vh);
+    text-align: center;
+    font-size: 3em;
 }
 
 /*navigation*/
@@ -52,7 +66,6 @@ nav {
 
 /*about*/
 #about {
-    background-image: linear-gradient(black, rgb(50, 0, 0));
     margin-top: calc(2.5vw + 2.5vh);
     display: flex;
     flex-wrap: wrap;
@@ -84,23 +97,7 @@ nav {
 }
 
 /*projects*/
-#projects-title {
-    background-color: rgb(50, 0, 0);
-    margin: 0;
-    padding: 0;
-    border-top-style: dashed;
-    border-bottom-style: dashed;
-    border-color: black;
-}
-#projects-title h1 {
-    margin: 0;
-    padding-top: calc(1vw + 1vh);
-    padding-bottom: calc(1vw + 1vh);
-    text-align: center;
-    font-size: 3em;
-}
 #projects {
-    background-image: linear-gradient(rgb(50, 0, 0), black);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -115,8 +112,13 @@ nav {
     text-decoration-color: white;
 }
 .projects-left p {
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: rgb(200, 200, 200);
+    border-style: solid;
+    border-radius: 25px;
+    border-color: white;
+    padding: calc(2vh + 2vw);
+    margin-top: 4vw;
 }
 .projects-right {
     flex-grow: 1;
@@ -132,4 +134,11 @@ nav {
     display: block;
     margin: auto;
     width: 90%;
+}
+
+/*contact*/
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
