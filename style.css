@@ -52,7 +52,7 @@ nav {
 
 /*about*/
 #about {
-    background-image: linear-gradient(black, rgb(25, 0, 0));
+    background-image: linear-gradient(black, rgb(50, 0, 0));
     margin-top: calc(2.5vw + 2.5vh);
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +85,7 @@ nav {
 
 /*projects*/
 #projects-title {
-    background-color: rgb(25, 0, 0);
+    background-color: rgb(50, 0, 0);
     margin: 0;
     padding: 0;
     border-top-style: dashed;
@@ -100,30 +100,36 @@ nav {
     font-size: 3em;
 }
 #projects {
-    background-image: linear-gradient(rgb(25, 0, 0), black);
+    background-image: linear-gradient(rgb(50, 0, 0), black);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-#projects-audio {
+.projects-left {
     flex-basis: 50vw;
-    padding-right: 1vw;
+    flex-grow: 1;
+    padding-left: 2vw;
 }
-#projects-audio h1 {
+.projects-left h1 {
     text-decoration: underline;
     text-decoration-color: white;
 }
-#projects-audio p {
-    font-size: 1.25em;
+.projects-left p {
+    font-size: 1.5em;
     color: rgb(200, 200, 200);
 }
-#projects-audio-example {
-    flex-basis: 40vw;
+.projects-right {
+    flex-grow: 1;
+    flex-basis: 45vw;
 }
-#projects-audio-example h1 {
+.projects-right h1 {
     text-align: center;
+    color: red;
+    text-decoration: underline;
 }
-#projects-audio-example img {
+.projects-right img {
     height: auto;
-    width: 40vw;
+    display: block;
+    margin: auto;
+    width: 90%;
 }
