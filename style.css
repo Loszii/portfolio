@@ -3,7 +3,7 @@ body {
     color: white;
     background: rgb(25, 25, 25) fixed;
     font-size: calc(1vw + 0.5vh);
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Inter Tight", sans-serif;
 }
 ul {
     list-style: none;
@@ -25,8 +25,7 @@ ul {
 
 /*navigation*/
 nav {
-    position: fixed;
-    width: 100vw;
+    position: sticky;
     top: 0;
     left: 0;
 }
@@ -67,7 +66,6 @@ nav {
 
 /*about*/
 #about {
-    margin-top: calc(2.5vw + 2.5vh);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -130,6 +128,9 @@ nav {
 }
 .projects-right h1 {
     text-align: center;
+}
+.projects-right a {
+    color: white;
 }
 .projects-right img {
     height: auto;
