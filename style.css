@@ -62,25 +62,25 @@ nav {
     display: flex;
     justify-content: space-around;
     padding: calc(2vw + 1vh);
+}
+#about div {
     background-image: url("/res/waves.png");
     background-size: contain;
 }
 #scroller {
-    max-width: 30vw;
-}
-#scroller[data-animated="true"] {
+    margin: auto;
+    max-width: 40vw;
     overflow: hidden;
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
-#scroller[data-animated="true"] #tech-list {
+#tech-list {
+    padding-left: 0;
+    gap: 2vw;
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll 5s linear infinite;
-}
-#tech-list {
+    animation: scroll 10s linear infinite;
     display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
 }
 #tech-list img {
     height: calc(4vw + 2vh);
@@ -88,7 +88,7 @@ nav {
 }
 @keyframes scroll {
     to {
-        transform: translate(-50%);
+        transform: translate(calc(-50% - 1vw));
     }
 }
 #stevens {
