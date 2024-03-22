@@ -1,26 +1,19 @@
 /*generic*/
 body {
-    color: white;
     background: rgb(25, 25, 25) fixed;
+    color: white;
     font-size: calc(1vw + 0.5vh);
     font-family: "Inter Tight", sans-serif;
+    margin: 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
 ul {
     list-style: none;
 }
-.title {
-    margin-top: calc(2vh + 1vw);
-    margin-bottom: calc(2vh + 1vw);
-    border-top-style: dashed;
-    border-bottom-style: dashed;
-    border-color: black;
-}
-.title h1 {
-    margin: 0;
-    padding-top: calc(1vw + 1vh);
-    padding-bottom: calc(1vw + 1vh);
-    text-align: center;
-    font-size: 3em;
+@keyframes fadeIn {
+    from {opacity: 25%;}
+    to {opacity: 100%;} 
 }
 
 /*navigation*/
@@ -67,81 +60,18 @@ nav {
 /*about*/
 #about {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5vw;
+    justify-content: space-around;
+    padding: calc(2vw + 1vh);
 }
-#about-greeting {
+#tech {
     display: flex;
-    padding-bottom: 0;
-    padding-top: 0;
+    justify-content: space-evenly;
 }
-#about-hi {
-    font-size: 7em;
-    margin-bottom: 1vh;
-}
-#about-name {
-    font-size: 4em;
-    margin-left: 10vw;
-}
-#about-stack {
-    display: flex;
-    justify-content: center;
-    gap: 3vw;
-    margin-bottom: 1vh;
-}
-#about-stack h1 {
-    font-size: 0.75em;
-}
-#about-stack img {
+#tech img {
     height: auto;
-    width: calc(3vw + 3vh);
+    width: calc(4vw + 2vh);
 }
-
-/*projects*/
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.projects-left {
-    flex-basis: 50vw;
-    flex-grow: 1;
-    padding-left: 2vw;
-}
-.projects-left h1 {
-    text-decoration: underline;
-    text-decoration-color: white;
-}
-.projects-left p {
-    font-size: 1.25em;
-    color: rgb(200, 200, 200);
-    border-style: solid;
-    border-radius: 25px;
-    border-color: white;
-    padding: calc(2vh + 2vw);
-    margin-top: 4vw;
-}
-.projects-right {
-    flex-grow: 1;
-    flex-basis: 45vw;
-}
-.projects-right h1 {
-    text-align: center;
-}
-.projects-right a {
-    color: white;
-}
-.projects-right img {
+#stevens {
     height: auto;
-    display: block;
-    margin: auto;
-    width: 90%;
-}
-
-/*contact*/
-#contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: calc(15vw + 7.5vh);
 }
