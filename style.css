@@ -34,14 +34,17 @@ body {
 
 /*social*/
 #social {
-    padding: 2em;
+    padding: 1em;
     display: flex;
     justify-content: space-evenly;
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(50, 50, 50, 0.5) 25%, rgba(100, 100, 100, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+    gap: 1em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(50, 50, 50, 0.5) 25%, rgba(100, 100, 100, 0.5) 85%, rgba(0, 0, 0, 0) 100%);
+}
+#social a {
+    animation: scroll-right 2s;
 }
 #social img {
     width: 4em;
-    animation: scroll-right 2s;
 }
 @keyframes scroll-right {
     from {margin-right: -10%}
