@@ -24,8 +24,22 @@ body {
     background-position: center;
     animation: scroll 2s;
 }
-#about h1 {
+#container {
+    display: inline-block;
+}
+#container h1 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
     text-shadow: 0 0 2px black, 0 0 5px white;
+    border-right: 5px solid;
+    animation: typing 1s steps(16), cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+@keyframes typing {
+    from {width: 0}
 }
 @keyframes scroll {
     from {margin-left: -10%}
