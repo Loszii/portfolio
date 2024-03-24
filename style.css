@@ -1,99 +1,49 @@
 /*generic*/
-/*use less vw, vh for zoom responsiveness*/
 body {
     background: rgb(25, 25, 25) fixed;
     color: white;
-    font-size: calc(1vw + 0.5vh + 0.25rem);
+    font-size: calc(1vw + 0.5vh + 0.75rem);
     font-family: "Inter Tight", sans-serif;
     margin: 0;
     animation-name: fadeIn;
     animation-duration: 2s;
-}
-ul {
-    list-style: none;
 }
 @keyframes fadeIn {
     from {opacity: 25%;}
     to {opacity: 100%;} 
 }
 
-/*navigation*/
-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    font-size: 0.75em;
-}
-#nav-list {
-    display: flex;
-    gap: 5em;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-}
-#nav-list li {
-    min-width: 0;
-}
-#nav-list a {
-    position: relative;
-    color: grey;
-    text-decoration: none;
-}
-#nav-list a:after{
-    content: "";
-    position: absolute;
-    background-color: white;
-    height: 3px;
-    width: 0;
-    left: 0px;
-    bottom: -5px;
-}
-#nav-list a:hover:after{
-    width: 100%;
-    transition: 0.3s;
-}
-#nav-list a:hover{
-    color: white;
-}
-#logo {
-    margin-left: 1em;
-}
-
 /*about*/
 #about {
     display: flex;
     justify-content: space-around;
-    padding: calc(2vw + 1vh);
+    padding: 1em;
 
     background-image: url("/res/waves.png");
     background-size: contain;
     background-position: center;
+    animation: scroll 2s;
 }
-#scroller {
-    margin: auto;
-    max-width: 40vw;
-    overflow: hidden;
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-}
-#tech-list {
-    padding-left: 0;
-    gap: 2vw;
-    width: max-content;
-    flex-wrap: nowrap;
-    animation: scroll 10s linear infinite;
-    display: flex;
-    flex-wrap: wrap;
-}
-#tech-list img {
-    height: calc(4vw + 2vh);
-    width: calc(4vw + 2vh);
+#about h1 {
+    display: block;
 }
 @keyframes scroll {
-    to {
-        transform: translate(calc(-50% - 1vw));
-    }
+    from {margin-left: -10%}
+    to {margin-left: 0}
 }
-#stevens {
-    width: 20%;
-    height: 20%;
+
+/*social*/
+#social {
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(50, 50, 50, 0.5) 25%, rgba(100, 100, 100, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+}
+#social img {
+    width: 4em;
+    animation: scroll-right 2s;
+}
+@keyframes scroll-right {
+    from {margin-right: -10%}
+    to {margin-right: 0}
 }
