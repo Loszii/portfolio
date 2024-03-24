@@ -25,7 +25,7 @@ body {
     animation: scroll 2s;
 }
 #about h1 {
-    display: block;
+    text-shadow: 0 0 2px black, 0 0 5px white;
 }
 @keyframes scroll {
     from {margin-left: -10%}
@@ -49,4 +49,21 @@ body {
 @keyframes scroll-right {
     from {margin-right: -10%}
     to {margin-right: 0}
+}
+
+/*projects*/
+#projects {
+    display: flex;
+    animation: scroll-bottom 2s;
+    background-image: url("/res/brushes.png");
+    background-size: contain;
+    background-position: center;
+}
+#projects h1 {
+    margin: 0;
+    margin-left: 1em;
+}
+@keyframes scroll-bottom {
+    from {margin-top: 10%}
+    to {margin-top: 0}
 }
