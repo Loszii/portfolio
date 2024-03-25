@@ -48,11 +48,11 @@ body {
 
 /*social*/
 #social {
-    padding: 1em;
+    padding: 0.5em;
     display: flex;
     justify-content: space-evenly;
     gap: 1em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(50, 50, 50, 0.5) 25%, rgba(100, 100, 100, 0.5) 85%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 100, 1) 50%, rgba(0, 0, 0, 0) 100%)
 }
 #social a {
     animation: scroll-right 2s;
@@ -60,6 +60,7 @@ body {
 #social img {
     width: 4em;
 }
+
 @keyframes scroll-right {
     from {margin-right: -10%}
     to {margin-right: 0}
@@ -67,17 +68,53 @@ body {
 
 /*projects*/
 #projects {
-    display: flex;
     animation: scroll-bottom 2s;
     background-image: url("/res/brushes.png");
     background-size: contain;
     background-position: center;
 }
-#projects h1 {
+#projects-title {
     margin: 0;
     margin-left: 1em;
+    padding-top: 0.5em;
+}
+.proj {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    
+}
+.proj h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+.proj-details {
+    flex-basis: 60%;
+    flex-grow: 1;
+}
+.proj-img {
+    flex-basis: 35%;
+    flex-grow: 1;
+}
+.proj-img img{
+    height: auto;
+    width: 100%;
+}
+.proj-img a {
+    text-decoration: none;
+    color: white;
 }
 @keyframes scroll-bottom {
     from {margin-top: 10%}
     to {margin-top: 0}
+}
+@media screen and (max-width: 1000px) {
+    .proj-details {
+        flex-basis: 100%;
+    }
+    .proj-img {
+        flex-basis: 100%;
+    }
 }
