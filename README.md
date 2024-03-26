@@ -1,1 +1,1 @@
-Personal Portfolio to display myself and practice my front-end
+This is my personal portfolio, it includes links to my socials aswell as a brief description of my projects.

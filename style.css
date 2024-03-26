@@ -19,7 +19,7 @@ body {
     justify-content: space-around;
     padding: 1em;
 
-    background-image: url("/res/waves.png");
+    background-image: url("res/waves.png");
     background-size: contain;
     background-position: center;
     animation: scroll 2s;
@@ -59,6 +59,10 @@ body {
 }
 #social img {
     width: 4em;
+    transition: 0.5s ease-out;
+}
+#social img:hover {
+    transform: scale(1.1);
 }
 
 @keyframes scroll-right {
@@ -69,7 +73,7 @@ body {
 /*projects*/
 #projects {
     animation: scroll-bottom 2s;
-    background-image: url("/res/brushes.png");
+    background-image: url("res/brushes.png");
     background-size: contain;
     background-position: center;
 }
@@ -85,6 +89,9 @@ body {
     gap: 0.5em;
     
 }
+.proj a {
+    color: white;
+}
 .proj h1 {
     font-size: 1.5em;
     text-align: center;
@@ -97,6 +104,7 @@ body {
 .proj-img {
     flex-basis: 35%;
     flex-grow: 1;
+    padding-top: 1em;
 }
 .proj-img img{
     height: auto;
