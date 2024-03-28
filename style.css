@@ -83,11 +83,21 @@ body {
     padding-top: 0.5em;
 }
 .proj {
-    padding: 1em;
+    padding: 0.5em;
+    margin: 1em;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
+    line-height: 1.5em;
+
+    background-color: rgb(75, 75, 75, 0.5);
+    border-radius: 0.5em;
+    transition: 0.5s;
+    box-shadow: 0px 0px 3px 2px black;
     
+}
+.proj:hover {
+    background-color: rgb(75, 75, 75, 1);
 }
 .proj a {
     color: white;
@@ -104,16 +114,15 @@ body {
 .proj-img {
     flex-basis: 35%;
     flex-grow: 1;
-    padding-top: 1em;
+    display: flex;
+    
 }
 .proj-img img{
     height: auto;
     width: 100%;
+    align-self: center;
 }
-.proj-img a {
-    text-decoration: none;
-    color: white;
-}
+
 @keyframes scroll-bottom {
     from {margin-top: 10%}
     to {margin-top: 0}
