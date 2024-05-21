@@ -1,1 +1,1 @@
-This is my personal portfolio, it includes links to my socials aswell as a brief description of my projects.
+This is my personal portfolio, it includes links to my socials asw ell as a brief description of my projects.
