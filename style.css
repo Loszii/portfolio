@@ -1,10 +1,16 @@
 /*generic*/
-body {
-    background: rgb(25, 25, 25) fixed;
-    color: white;
-    font-size: calc(1vw + 0.5vh + 0.75rem);
+html {
+    font-size: calc((1vw + 1vh + 2rem)*(1/3));
+}
+* {
+    box-sizing: border-box;
     font-family: "Inter Tight", sans-serif;
     margin: 0;
+    padding: 0;
+}
+body {
+    background: black fixed;
+    color: white;
     animation-name: fadeIn;
     animation-duration: 2s;
 }
@@ -17,17 +23,16 @@ body {
 #about {
     display: flex;
     justify-content: space-around;
-    padding: 1em;
+    padding: 2em;
 
     background-image: url("res/waves.png");
+    background-color: rgb(25, 25, 25);
     background-size: contain;
     background-position: center;
     animation: scroll 2s;
 }
-#container {
-    display: inline-block;
-}
 #container h1 {
+    font-size: 3em;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -51,14 +56,13 @@ body {
     padding: 0.5em;
     display: flex;
     justify-content: space-evenly;
-    gap: 1em;
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 100, 1) 50%, rgba(0, 0, 0, 0) 100%)
 }
 #social a {
     animation: scroll-right 2s;
 }
 #social img {
-    width: 4em;
+    width: 5em;
     transition: 0.5s ease-out;
 }
 #social img:hover {
@@ -73,31 +77,30 @@ body {
 /*projects*/
 #projects {
     animation: scroll-bottom 2s;
-    background-image: url("res/brushes.png");
-    background-size: contain;
-    background-position: center;
+    background-color: black;
 }
-#projects-title {
-    margin: 0;
-    margin-left: 1em;
-    padding-top: 0.5em;
-}
+
 .proj {
     padding: 0.5em;
     margin: 1em;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
-    line-height: 1.5em;
+    line-height: 200%;
+    font-size: 1.5em;
 
-    background-color: rgb(75, 75, 75, 0.5);
+    background-color: rgb(10, 10, 10);
+    background-image: url("res/brushes.png");
+    background-size: cover;
+    background-position: center;
     border-radius: 0.5em;
+    border-style: solid;
+    border-color: rgb(25, 25, 25);
     transition: 0.5s;
-    box-shadow: 0px 0px 3px 2px black;
     
 }
 .proj:hover {
-    background-color: rgb(75, 75, 75, 1);
+    background-color: rgb(25, 25, 25);
 }
 .proj a {
     color: white;
@@ -105,7 +108,7 @@ body {
 .proj h1 {
     font-size: 1.5em;
     text-align: center;
-    margin: 0;
+    margin-bottom: 0.5em;
 }
 .proj-details {
     flex-basis: 60%;
@@ -133,5 +136,18 @@ body {
     }
     .proj-img {
         flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container h1 {
+        font-size: 2.5em;
+    }
+    .proj {
+        line-height: 125%;
+        font-size: 1.25em;
+    }
+    #social img {
+        width: 4em;
     }
 }
